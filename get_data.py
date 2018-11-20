@@ -10,5 +10,8 @@ data.lat='23.548013599999997'
 data.elevation=84
 data.date=str(utc)
 values=ephem.Sun(data)
-x=values.alt
-print('%s %s' %(values.alt,values.az))
+a=float(repr(values.alt)) 
+pi=3.141593
+b=(a*180)/pi
+print(int(b))
+
