@@ -13,5 +13,7 @@ values=ephem.Sun(data)
 a=float(repr(values.alt)) 
 pi=3.141593
 b=(a*180)/pi
+if(b<0):
+    b=0
 print(int(b))
 
