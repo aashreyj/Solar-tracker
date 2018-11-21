@@ -19,6 +19,6 @@ if(b<0):
 c=float(repr(values.az)) 
 d=(c*180)/pi
     
-print("Altitude = %d" %int(b))
-print("Azimuth = %d" %int(d))
+print("Altitude (upwards from horizon) = %d" %int(b))
+print("Azimuth (clock-wise from North) = %d" %int(d))
 
