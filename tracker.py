@@ -6,9 +6,11 @@ while True:
     utc = datetime.now(tzutc())
 
     data=ephem.Observer()
-    data.lon='87.28856189999999'
-    data.lat='23.548013599999997'
-    data.elevation=84
+    
+    data.lon='75.3172596'
+    data.lat='19.864609599999998'
+    data.elevation=567
+    
     data.date=str(utc)
     values=ephem.Sun(data)
 
