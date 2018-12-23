@@ -2,6 +2,11 @@ from datetime import datetime
 from dateutil.tz import tzutc
 import ephem
 import time
+import serial
+
+ser1=serial.Serial('',9600)
+ser2=serial.Serial('',9600)
+
 while True:
     utc = datetime.now(tzutc())
 
@@ -30,5 +35,7 @@ while True:
     print("Altitude (upwards from horizon) = %d" %int(al_servo))
     print("Azimuth (clock-wise from North) = %d" %int(azi_servo))
     print(" ")
+    ser1.write(al_servo)
+    ser2.write(azi_servo)
     time.sleep(5)
 
